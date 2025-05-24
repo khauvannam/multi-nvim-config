@@ -29,7 +29,7 @@ Paste the following function into your shell configuration file (`~/.bashrc`, `~
 ```bash
 _dynamic_nvim_config() {
   if [[ -n "$CONTAINER_ID" ]]; then
-    container_name="${CONTAINER_ID}"
+    container_name="${CONTAINER_ID,,}" # lowercase
     language="${container_name%-os}"
     config_path="nvim-${language}"
 
