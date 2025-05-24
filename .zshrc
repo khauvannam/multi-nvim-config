@@ -139,10 +139,11 @@ export PATH="$(brew --prefix php@8.2)/bin:$PATH"
 export PATH="$(brew --prefix php@8.2)/sbin:$PATH"
 
 # fnm install
-if command -v fnm >/dev/null 2>&1; then
-  export PATH="$HOME/.fnm:$PATH"
-  eval "$(fnm env)"
-fi
+# if command -v fnm >/dev/null 2>&1; then
+#   export PATH="$HOME/.fnm:$PATH"
+#   eval "$(fnm env)"
+# fi
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 _dynamic_nvim_config() {
   if [[ -n "$CONTAINER_ID" ]]; then
@@ -162,3 +163,9 @@ _dynamic_nvim_config() {
 }
 
 _dynamic_nvim_config 
+
+alias godot-os="distrobox enter godot-os"
+alias js-os="distrobox enter js-os"
+alias golang-os="distrobox enter golang-os"
+alias php-os="distrobox enter php-os"
+alias start-godot="/home/llama03dev/godot-engine/4.4.1/Godot_v4.4.1.x86_64"
