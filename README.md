@@ -1,8 +1,5 @@
-Certainly. Here's your guide in a clean, plain-text format without Markdown:
 
----
-
-**Guide: Using Multiple Neovim Configs with Distrobox**
+## **Guide: Using Multiple Neovim Configs with Distrobox**
 
 ---
 
