@@ -147,7 +147,7 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 
 _dynamic_nvim_config() {
   if [[ -n "$CONTAINER_ID" ]]; then
-    container_name="${CONTAINER_ID}"
+    container_name="${CONTAINER_ID,,}"
     language="${container_name%-os}"
     config_path="nvim-${language}"
 
